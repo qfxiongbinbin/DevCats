@@ -9,7 +9,7 @@ function App() {
       <div className="h-12 bg-gray-900 border-b border-gray-800 flex items-center justify-between px-4">
         <div className="flex items-center gap-2 text-gray-100">
           <span className="text-xl">🦞</span>
-          <span className="font-semibold">DevTools</span>
+          <span className="font-semibold">DevCats</span>
         </div>
         <div className="flex items-center gap-3">
           <button className="text-gray-400 hover:text-gray-100 transition-colors text-lg">🔍</button>
