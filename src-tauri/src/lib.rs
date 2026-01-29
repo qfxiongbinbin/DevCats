@@ -15,8 +15,9 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![
             greet,
-            commands::mysql::test_mysql_connection,
-            commands::mysql::execute_mysql_query,
+            // MySQL commands - temporarily disabled for MVP
+            // commands::mysql::test_mysql_connection,
+            // commands::mysql::execute_mysql_query,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
