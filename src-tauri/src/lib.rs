@@ -1,8 +1,6 @@
 // Prevents additional console window on Windows in release
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-mod commands;
-
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
 fn greet(name: &str) -> String {
@@ -15,9 +13,6 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![
             greet,
-            // MySQL commands - temporarily disabled for MVP
-            // commands::mysql::test_mysql_connection,
-            // commands::mysql::execute_mysql_query,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
